@@ -1,0 +1,11 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: filebrowser
+  namespace: filebrowser
+spec:
+  type: GitHub
+  pathname: https://github.com/Anshu-Garg/filebrowser-move.git
+  #secretRef:
+  #  name: my-github-secret

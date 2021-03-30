@@ -1,0 +1,16 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: filebrowser-placement
+  namespace: filebrowser
+  labels:
+    app: filebrowser
+spec:
+  clusterConditions:
+    - type: ManagedClusterConditionAvailable
+      status: "True"
+  #clusters:
+  #- name: gcp1-hive
+  clusterSelector:
+    matchLabels:
+      vendor: OpenShift
