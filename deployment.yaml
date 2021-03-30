@@ -1,0 +1,25 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    app: filebrowser
+  name: filebrowser
+  namespace: filebrowser
+spec:
+  replicas: 3
+  selector:
+    deploymentconfig: filebrowser
+  template:
+    metadata:
+      labels:
+        deploymentconfig: filebrowser
+    spec:
+      containers:
+      - image: filebrowser/filebrowser:latest
+        name: filebrowser
+        ports:
+        - containerPort: 81
+        volumeMounts:
+        - mountPath: /srv
+      volumes:
+      - emptyDir: {}
