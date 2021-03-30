@@ -21,3 +21,7 @@ spec:
         - containerPort: 81
         volumeMounts:
         - mountPath: /srv
+          name: filebrowser-volume-1
+        volumes:
+        - emptyDir: {}
+          name: filebrowser-volume-1
