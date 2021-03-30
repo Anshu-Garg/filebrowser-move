@@ -12,9 +12,9 @@ kubectl get dc filebrowser -o yaml> deployment.yaml
 kubectl get route filebrowser -o yaml> route.yaml
 kubectl get service/filebrowser -o yaml > service.yaml
 
-Above were then moved to new repo for adoption 
+Above were then moved to new repo for adoption https://github.com/Anshu-Garg/filebrowser-move.git
 
-Adoption happened from  https://github.com/Anshu-Garg/filebrowser.git
+Adoption happened from  https://github.com/Anshu-Garg/filebrowser-move.git
 with branch : main
      path: fb
      name: filebrowser
