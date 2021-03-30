@@ -25,3 +25,6 @@ spec:
         volumes:
         - emptyDir: {}
           name: filebrowser-volume-1
+      volumes:
+      - emptyDir: {}
+        name: filebrowser-volume-1
