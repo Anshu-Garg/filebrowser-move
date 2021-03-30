@@ -18,7 +18,7 @@ spec:
       - image: filebrowser/filebrowser:latest
         name: filebrowser
         ports:
-        - containerPort: 81
+        - containerPort: 80
         volumeMounts:
         - mountPath: /srv
           name: filebrowser-volume-1
