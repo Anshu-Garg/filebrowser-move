@@ -21,5 +21,3 @@ spec:
         - containerPort: 81
         volumeMounts:
         - mountPath: /srv
-      volumes:
-      - emptyDir: {}
