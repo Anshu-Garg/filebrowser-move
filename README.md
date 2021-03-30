@@ -5,6 +5,14 @@ oc adm policy add-scc-to-user anyuid -z  builder  --as system:admin
 
 Application was created from below repo
 oc new-app --as-deployment-config https://github.com/Anshu-Garg/filebrowser.git
+oc expose service/filebrowser
+
+Following was used to create application manifest
+kubectl get dc filebrowser -o yaml> deployment.yaml
+kubectl get route filebrowser -o yaml> route.yaml
+kubectl get service/filebrowser -o yaml > service.yaml
+
+Above were then moved to new repo for adoption 
 
 Adoption happened from  https://github.com/Anshu-Garg/filebrowser.git
 with branch : main
