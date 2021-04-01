@@ -2,28 +2,28 @@ apiVersion: apps.openshift.io/v1
 kind: DeploymentConfig
 metadata:
   labels:
-    app: filebrowser
-  name: filebrowser
-  namespace: filebrowser
+    app: filebrowser-isf
+  name: filebrowser-isf
+  namespace: file-browser
 spec:
   replicas: 1
   selector:
-    deploymentconfig: filebrowser
+    deploymentconfig: filebrowser-isf
   template:
     metadata:
       labels:
-        deploymentconfig: filebrowser
+        deploymentconfig: filebrowser-isf
     spec:
       containers:
       - image: filebrowser/filebrowser:latest
-        name: filebrowser
+        name: filebrowser-isf
         ports:
         - containerPort: 80
         volumeMounts:
         - mountPath: /srv
-          name: filebrowser-volume-1
+          name: filebrowser-isf
       volumes:
-        - name: filebrowser-volume-1
+        - name: filebrowser-isf
           persistentVolumeClaim:
             claimName: afm-pvc
             readOnly: true
