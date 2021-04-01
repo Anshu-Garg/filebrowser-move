@@ -7,9 +7,9 @@ metadata:
   namespace: filebrowser
 spec:
   ports:
-  - name: 81-tcp
-    port: 81
+  - name: 80-tcp
+    port: 80
     protocol: TCP
-    targetPort: 81
+    targetPort: 80
   selector:
     deploymentconfig: filebrowser
