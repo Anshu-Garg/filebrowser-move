@@ -4,6 +4,9 @@ metadata:
   name: filebrowser
   namespace: filebrowser
 spec:
+  selector:
+    matchLabels:
+      app: filebrowser
   port:
     targetPort: 80-tcp
   to:
