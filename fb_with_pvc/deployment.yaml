@@ -1,5 +1,5 @@
 apiVersion: apps.openshift.io/v1
-kind: DeploymentConfig
+kind: Deployment
 metadata:
   labels:
     app: filebrowser
@@ -8,11 +8,12 @@ metadata:
 spec:
   replicas: 1
   selector:
-    deploymentconfig: filebrowser
+    matchLabels:
+      app: filebrowser
   template:
     metadata:
       labels:
-        deploymentconfig: filebrowser
+        app: filebrowser
     spec:
       containers:
       - image: filebrowser/filebrowser:v2
