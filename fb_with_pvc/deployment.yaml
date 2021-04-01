@@ -15,7 +15,7 @@ spec:
         deploymentconfig: filebrowser
     spec:
       containers:
-      - image: filebrowser/filebrowser:latest
+      - image: filebrowser/filebrowser:v2
         name: filebrowser
         ports:
         - containerPort: 80
