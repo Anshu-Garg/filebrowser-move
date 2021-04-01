@@ -6,7 +6,7 @@ metadata:
   name: placement-filebrowser-subscription
   namespace: filebrowser
   annotations:
-    apps.open-cluster-management.io/github-path: fb
+    apps.open-cluster-management.io/github-path: fb_with_pvc
     apps.open-cluster-management.io/github-branch: main
 spec:
   channel: filebrowser/filebrowser
