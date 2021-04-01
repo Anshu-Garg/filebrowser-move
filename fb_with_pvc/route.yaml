@@ -2,10 +2,12 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: filebrowser
+  labels:
+    app: filebrowser
+  namespace: filebrowser
 spec:
   port:
     targetPort: 80-tcp
   to:
     kind: Service
     name: filebrowser
-    weight: 100
