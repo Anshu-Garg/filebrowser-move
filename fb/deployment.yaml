@@ -26,5 +26,7 @@ spec:
         - emptyDir: {}
           name: filebrowser-volume-1
       volumes:
-      - emptyDir: {}
-        name: filebrowser-volume-1
+        - name: filebrowser-volume-1
+          persistentVolumeClaim:
+            claimName: afm-pvc
+            readOnly: false
