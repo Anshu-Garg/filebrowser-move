@@ -17,7 +17,7 @@ spec:
       imagePullSecrets:
       - name: regcred
       containers:
-      - image: filebrowser/filebrowser:latest
+      - image: quay.io/smitaraut/filebrowser:latest
         name: filebrowser
         ports:
         - containerPort: 80
