@@ -14,8 +14,6 @@ spec:
       labels:
         deploymentconfig: filebrowser
     spec:
-      imagePullSecrets:
-      - name: regcred
       containers:
       - image: quay.io/smitaraut/filebrowser:latest
         name: filebrowser
