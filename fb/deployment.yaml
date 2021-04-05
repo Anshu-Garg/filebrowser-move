@@ -14,6 +14,8 @@ spec:
       labels:
         deploymentconfig: filebrowser
     spec:
+      imagePullSecrets:
+      - name: regcred
       containers:
       - image: filebrowser/filebrowser:latest
         name: filebrowser
