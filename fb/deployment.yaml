@@ -15,7 +15,7 @@ spec:
         deploymentconfig: filebrowser
     spec:
       containers:
-      - image: quay.io/smitaraut/filebrowser:latest
+      - image: quay.io/vamseekrishna25/filebrowser:latest
         name: filebrowser
         ports:
         - containerPort: 80
