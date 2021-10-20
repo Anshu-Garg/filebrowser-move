@@ -12,7 +12,26 @@ Following was used to create application manifest:
 - kubectl get route filebrowser -o yaml> route.yaml
 - kubectl get service/filebrowser -o yaml > service.yaml
 
+**Deployment via ACM console**
 Above were then moved to new repo for adoption https://github.com/Anshu-Garg/filebrowser-move.git
+
+Ensure you create a namespace : filebrowser in target cluster
+Ensure you create a pvc named afm-pvc in namespace filebrowser
+
+I used below yaml to create pvc
+
+```
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: afm-pvc
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+```
 
 Adoption happened from  https://github.com/Anshu-Garg/filebrowser-move.git:
 
