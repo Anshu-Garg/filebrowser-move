@@ -13,6 +13,7 @@ Following was used to create application manifest:
 - kubectl get service/filebrowser -o yaml > service.yaml
 
 **Deployment via ACM console**
+
 Above were then moved to new repo for adoption https://github.com/Anshu-Garg/filebrowser-move.git
 
 Ensure you create a namespace : filebrowser in target cluster
