@@ -16,14 +16,11 @@ spec:
     spec:
       containers:
       - image: quay.io/smitaraut/filebrowser:latest
-        name: filebrowser
+        name: file-browser-container
         ports:
         - containerPort: 80
         volumeMounts:
         - mountPath: /srv
-          name: mypvc
-        volumes:
-        - emptyDir: {}
           name: mypvc
       volumes:
         - name: mypvc
