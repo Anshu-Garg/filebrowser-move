@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: file-browser-pod
+  labels:
+    app: file-browser
+spec:
+  imagePullSecrets:
+   - name: regcred
+  containers:
+   - name: file-browser-container
+     image: quay.io/smitaraut/filebrowser:latest
+     volumeMounts:
+       - name: mypvc
+         mountPath: /srv
+     ports:
+     - containerPort: 80
+  volumes:
+   - name: mypvc
+     persistentVolumeClaim:
+       claimName: filebrowser-pvc
+       readOnly: false
