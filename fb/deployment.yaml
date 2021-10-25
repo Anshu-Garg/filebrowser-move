@@ -21,12 +21,12 @@ spec:
         - containerPort: 80
         volumeMounts:
         - mountPath: /srv
-          name: filebrowser-volume-1
+          name: mypvc
         volumes:
         - emptyDir: {}
-          name: filebrowser-volume-1
+          name: mypvc
       volumes:
-        - name: filebrowser-volume-1
+        - name: mypvc
           persistentVolumeClaim:
-            claimName: afm-pvc
+            claimName: filebrowser-pvc
             readOnly: false
