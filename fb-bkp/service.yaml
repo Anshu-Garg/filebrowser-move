@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
+  name: file-browser
   labels:
-    app: filebrowser
-  name: filebrowser
+    app: file-browser
   namespace: filebrowser
 spec:
   ports:
-  - name: 80-tcp
-    port: 80
-    protocol: TCP
-    targetPort: 80
+    - name: 80-tcp
+      port: 80
+      protocol: TCP
+      targetPort: 80
   selector:
-    deploymentconfig: filebrowser
+    deploymentconfig: file-browser
