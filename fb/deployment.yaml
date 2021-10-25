@@ -25,5 +25,5 @@ spec:
       volumes:
         - name: mypvc
           persistentVolumeClaim:
-            claimName: filebrowser-pvc
+            claimName: fb-app
             readOnly: false
