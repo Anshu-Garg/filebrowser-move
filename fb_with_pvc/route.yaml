@@ -1,13 +1,13 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: filebrowser
+  name: file-browser
   labels:
-    app: filebrowser
+    app: file-browser
   namespace: filebrowser
 spec:
   port:
     targetPort: 80-tcp
   to:
     kind: Service
-    name: filebrowser
+    name: file-browser
