@@ -1,5 +1,5 @@
 resources:
-- pvc.yaml
+#- pvc.yaml
 - pod.yaml
 - service.yaml
 #- deployment.yaml
